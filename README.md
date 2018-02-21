@@ -17,6 +17,8 @@ bash clean.sh// clean the folder and slurm output texts.
 
 format explaination:
 ```
-#SBATCH --array=1-367 //array task range from 1 to 367, next line will send 367 processes to 367 cores in parallel.
-srun /home/sylarcp/anitaNeutrino/anitaBuildTool/build/bin/./doAll $SLURM_ARRAY_TASK_ID 30002 // true slurm command that sending work to cluster.
+//array task range from 1 to 367, next line will send 367 processes to 367 cores in parallel.
+#SBATCH --array=1-367 
+// true slurm command that sending work to cluster.
+srun /home/sylarcp/anitaNeutrino/anitaBuildTool/build/bin/./doAll $SLURM_ARRAY_TASK_ID 30002 
 ```
